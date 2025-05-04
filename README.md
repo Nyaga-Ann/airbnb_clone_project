@@ -228,7 +228,7 @@ Using a CI/CD pipeline ensures that every code push is automatically tested and 
 - PUT /reviews/{review_id}/ - Update review
 - DELETE /reviews/{review_id}/ - Delete review
 
-📌 Note
+## 📌 Note  
 This project is ongoing, and I am open to suggestions, contributions or collaboration to improve it sfunctionality or design.  
 Feel free to reach out via:  
 -Email: anngakii02@gmail.com  
