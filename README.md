@@ -1,22 +1,78 @@
-# airbnb_clone_project
+<p align="center">
+  <img src="images/bnbpy.jpeg" alt="Project Architecture" width="100%" />
+</p>
+
+# Airbnb_clone_project
 
 ## 🏗️ Project Overview
-The Airbnb Clone Project is a comprehensive real_world application designed to replicate the core features of an Airbnb. It focuses on full-stack development-specifically backend systems, dataabase architecture, API design, and security. The project offers hands on experience with scalable and secure application design, encouraging team collaboration and modular thinking.
+The backend for the Airbnb Clone project is designed to provide a robust and scalable foundation for managing user interactions, property listings, bookings, payments, and reviews. This backend supports core Airbnb-like functionalities, ensuring a seamless experience for both users and hosts.
 
 ## 🎯 Project Goals
-- Develop a scalable and secure web-based booking platform.
-- Understand full-stack architecture and backend service implementation.
-- Gain hands-on experience with database modeling and API development.
-- Practice modern DevOps practices such as CI/CD.
+- User Management: Secure user registration, authentication, and profile handling.
+- Property Management: Creation, update, and management of property listings. 
+- Booking System: Reservation of properties with full booking lifecycle management.
+- Payment Processing: Secure and efficient handling of payment transactions.
+- Review System: Users can rate and review properties.
+- Data Optimization: Efficient data retrieval through indexing and caching.
 
-## ⚙️ Tech Stack
-- **Backend:** Django (Python)
-- **Database:** PostgreSQL
-- **API Layer:** GraphQL
-- **Version Control:** Git & Github
-- **CI/CD:** Github Actions, Docker
+## 🛠️ Features Overview
 
-## 🧾 Team Roles and Responsibilities
+### 1. API Documentation
+OpenAPI Standard: For clear and integrable API reference.  
+Django REST Framework: Handles RESTful API operations.  
+GraphQL: Enables efficient, flexible queries.
+
+### 2. User Authentication
+Endpoints: /users/, /users/{user_id}/  
+Features: Registration, login, and profile management.  
+
+### 3. Property Management
+Endpoints: /properties/, /properties/{property_id}/  
+Features: CRUD operations for listings.  
+
+### 4. Booking System
+Endpoints: /bookings/, /bookings/{booking_id}/  
+Features: Create, update, and manage bookings.  
+
+### 5. Payment Processing
+Endpoint: /payments/  
+Features: Process and track payments.  
+
+### 6. Review System
+Endpoints: /reviews/, /reviews/{review_id}/  
+Features: Submit and manage property reviews.  
+
+### 7. Database Optimizations
+Indexing: Accelerates frequent queries.  
+Caching: Reduces load, boosts performance.  
+
+## 🛠️ Technology Stack
+
+**Django**  
+Web framework for building RESTful APIs.
+
+**Django REST Framework**
+Facilitates API creation and serialization.
+
+**PostgreSQL**  
+Relational database for storing project data.
+
+**GraphQL**  
+ Enhances querying capabilities and efficiency.
+ 
+**Docker**  
+Containerizes applications for consistent environments.
+
+**GitHub Actions**  
+Automates CI/CD processes.
+
+**Celery**  
+Manages asynchronous tasks like email or payment handling.
+
+**Redis**  
+Handles caching and session storage.
+
+## 👥 Team Roles and Responsibilities
 - **Backend Developer**: Responsible for building and maintaining the server-side logic, develops RESTful APIs, manages authentication, and integrates with the database and other services.
 - **Frontend Developer**: Responsible for designing and implementing the client-facing interface of the application, consuming backend APIs and ensuring a responsive user experience.
 - **Database Administrator(DBA)**: Responsible for creating and managing database schemas, ensuring data integrity, optimizing performance, and handling database backups and security.
@@ -24,30 +80,7 @@ The Airbnb Clone Project is a comprehensive real_world application designed to r
 - **UI/UX Designer**: Responsible for crafting intuitive user interfaces and smooth user Experience by designigning wirefrmaes, prototypes, and final user-facing layouts.
 - **QA Engineer(Tester)**: Responsilbe for Testing application functionality, writing automated tests, ensuring bug tracking and resolution, and maintaining the overall code quality.
 - **Project Manager**: Coordinates tasks across the team, sets milestones, tracks progress, and ensures timely delivery of all project components.
-- 
-## 🛠️ Technology Stack
-
-**Django**  
-A high-level Python web framework that promotes rapid development and clean, pragmatic design. It handles backend logic, ORM-based database operations, authentication, and API development.
-
-**PostgreSQL**  
-A powerful, open-source object-relational database system used to store and manage data. It integrates seamlessly with Django and supports advanced data types and performance optimization.
-
-**GraphQL**  
-A query language for APIs that enables clients to request exactly the data they need. It provides more flexibility than REST and helps reduce over-fetching or under-fetching of data.
-
-**Docker**  
-A containerization platform that packages the application and its dependencies into a single container. It ensures consistent environments across development, testing, and deployment.
-
-**GitHub Actions**  
-A CI/CD tool integrated with GitHub that automates workflows like testing, building, and deploying applications upon push or pull requests.
-
-**Pytest**  
-A testing framework for Python that makes it easy to write simple and scalable test cases for your Django backend.
-
-**Postman**  
-An API platform used for building, testing, and documenting APIs. It helps developers send requests to the backend and view responses for validation.
-
+  
 ## 🧩 Database Design
 
 This section outlines the key entities in the Airbnb Clone project, their essential fields, and relationships between them.
@@ -163,5 +196,34 @@ Using a CI/CD pipeline ensures that every code push is automatically tested and 
 - **Docker**: For creating containerized, consistent environments that can run across any infrastructure.
 - **Heroku / Render / Railway** (optional): For automated deployment of the backend to a live environment.
 
+## 📈 API Endpoints Overview
+**Users**
+- GET /users/ - List all users
+- POST /users/ - Create user
+- GET /users/{user_id}/ - View user
+- PUT /users/{user_id}/ - Update user
+- DELETE /users/{user_id}/ - Delete user
 
+**Properties**
+- GET /properties/ - List properties
+- POST /properties/ - Add property
+- GET /properties/{property_id}/ - View property
+- PUT /properties/{property_id}/ - Update property
+- DELETE /properties/{property_id}/ - Remove property
 
+**Bookings**
+- GET /bookings/ - List bookings
+- POST /bookings/ - Make booking
+- GET /bookings/{booking_id}/ - View booking
+- PUT /bookings/{booking_id}/ - Edit booking
+- DELETE /bookings/{booking_id}/ - Cancel booking
+
+**Payments**
+- POST /payments/ - Process payment
+
+**Reviews**
+- GET /reviews/ - List reviews
+- POST /reviews/ - Submit review
+- GET /reviews/{review_id}/ - View review
+- PUT /reviews/{review_id}/ - Update review
+- DELETE /reviews/{review_id}/ - Delete review
