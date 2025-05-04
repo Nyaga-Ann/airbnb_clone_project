@@ -15,7 +15,7 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 - Review System: Users can rate and review properties.
 - Data Optimization: Efficient data retrieval through indexing and caching.
 
-## 🛠️ Features Overview
+## 💡 Features Overview
 
 ### 1. API Documentation
 OpenAPI Standard: For clear and integrable API reference.  
@@ -227,3 +227,9 @@ Using a CI/CD pipeline ensures that every code push is automatically tested and 
 - GET /reviews/{review_id}/ - View review
 - PUT /reviews/{review_id}/ - Update review
 - DELETE /reviews/{review_id}/ - Delete review
+
+📌 Note
+This project is ongoing, and I am open to suggestions, contributions or collaboration to improve it sfunctionality or design.  
+Feel free to reach out via:  
+-Email: anngakii02@gmail.com  
+-LinkedIn: www.linkedin.com/in/ann-nyaga-181ba8260
